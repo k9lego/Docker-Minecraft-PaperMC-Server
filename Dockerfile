@@ -1,7 +1,7 @@
 ########################################################
 ############## We use a java base image ################
 ########################################################
-FROM openjdk:11 AS build
+FROM openjdk:8 AS build
 
 MAINTAINER Marc Tönsing <marc@marc.tv>
 
@@ -28,7 +28,7 @@ RUN mv /opt/minecraft/cache/patched*.jar paperspigot.jar
 ########################################################
 ############## Running environment #####################
 ########################################################
-FROM openjdk:11 AS runtime
+FROM openjdk:8 AS runtime
 
 # Working directory
 WORKDIR /data
